@@ -1,0 +1,57 @@
+
+#入力
+import numpy as np
+import sys
+array = []
+for line in iter(sys.stdin.readline, ""):
+    array.append(line.rstrip('\r\n'))
+
+#print(array)    
+#print(array[1][2])
+
+#文字列の出力関数
+def output(tango):
+    nagasa = len(tango)
+    print(tango[2:nagasa])
+
+#output(array[2])
+#文字数カウント
+No = len(array)-1
+#print(No)
+
+#割られる数の入力
+num = int(array[len(array)-1])
+#print(num)
+
+
+#数値に置き換え
+#for i in range((len(array))):
+    #print(i)
+    
+    #array.replace(array[i][0],int(array[i][0]))
+    #print(array[i][0])
+
+#nana = int(array[0][0])
+#print(nana)
+
+#商の計算の関数
+syou = []
+def mod(warareru,*waru):
+    for j in waru:
+        if warareru % j == 0:
+            #print(j)
+            syou.append(j)
+
+
+#print(syou)
+#商で出力された文字列に対応する値を取り出す
+for k in syou:
+    for l in range(len(array)):
+        if l == k:
+            output(array[k])
+
+suji = []
+ for m in range(len(array)):
+     suji.append(array[m][0])
+
+mod(num,suji)
